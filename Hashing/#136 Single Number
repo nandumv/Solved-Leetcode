@@ -1,0 +1,24 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        freq = {}
+        for i in nums:
+            if i not in freq:
+                freq[i] = 1
+            else:
+                freq[i] += 1
+        for i in nums:
+            if freq[i] == 1:
+                return i
+
+
+
+////////////////////////////////////////////////////also there is a optimal solution using XOR
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        ans = 0
+
+        for i in nums:
+            ans ^= i
+
+        return ans
