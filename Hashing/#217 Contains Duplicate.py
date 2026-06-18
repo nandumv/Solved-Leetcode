@@ -10,7 +10,7 @@ class Solution:
 
 
 
-Minimal Method:
+//Minimal Method:
 
         seen = set(nums)
         return len(nums) != len(set(nums))
