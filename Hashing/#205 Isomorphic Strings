@@ -1,0 +1,20 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        f = {}
+        used = set()
+        for i,j in zip(s,t):
+                if i not in f:
+                    f[i] = j
+                    if j in used:
+                        return False
+                    else:
+                        used.add(j)
+
+        for i,j in zip(s,t):
+            if j != f[i]:
+                return False
+        return True
+
+        
+       
+            
